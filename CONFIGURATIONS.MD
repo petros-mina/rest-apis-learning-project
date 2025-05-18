@@ -18,7 +18,7 @@ Then ensure that all three programs run as follows
 - VScode for code changes etc
 - Docker 
 
-To run the docker app then use the following command from within the VSCode terminal 
+To run the docker app locally then use the following command from within the VSCode terminal 
 
 ```
 docker run -dp 5000:5000 -w //app -v "C:\Users\petro\OneDrive\Documents\APIcourse\pythonrefresher\StoreAPIproject://app" rest-apis-flask-python
@@ -42,3 +42,13 @@ if no changes were  made then docker compose up should work too
 ```
 docker compose up
 ```
+
+# .env FILE
+
+you need a .env file that with a 
+
+```
+DATABASE_URL=
+``` 
+
+paramater to connect to a database locally

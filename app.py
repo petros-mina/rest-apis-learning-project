@@ -1,6 +1,9 @@
 #import the os library
 import os
 
+#import the dotenv lib to loatd the ".env" file that hosts the app paramters
+from dotenv import load_dotenv
+
 #import the secrets library to generate the secret key
 #actually you don't use the library here run this liubrary
 #in the terminal and obtain the rand bits as follows secrets.randbits(128)
@@ -37,6 +40,9 @@ def create_app(db_url=None):
 	
 	#create the app instance
 	app = Flask(__name__)
+
+	#load the .env file that has the app parameters
+	load_dotenv() 
 
 	#configure the app
 	app.config["PROPAGATE_EXCEPTIONS"] = True
